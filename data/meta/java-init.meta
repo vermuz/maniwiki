@@ -1,0 +1,36 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1379257564;s:8:"modified";i:1379302497;}s:7:"creator";s:4:"mani";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1379302497;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:9:"java-init";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:4:"mani";}s:5:"title";s:4:"Java";s:11:"description";a:2:{s:15:"tableofcontents";a:18:{i:0;a:4:{s:3:"hid";s:4:"java";s:5:"title";s:4:"Java";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:11:"hello_world";s:5:"title";s:11:"Hello World";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:2;a:4:{s:3:"hid";s:5:"class";s:5:"title";s:5:"Class";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:3;a:4:{s:3:"hid";s:6:"method";s:5:"title";s:6:"Method";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:4;a:4:{s:3:"hid";s:5:"final";s:5:"title";s:5:"FINAL";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:5;a:4:{s:3:"hid";s:10:"math_class";s:5:"title";s:10:"Math Class";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:6;a:4:{s:3:"hid";s:16:"formatted_output";s:5:"title";s:16:"Formatted Output";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:7;a:4:{s:3:"hid";s:13:"scanner_input";s:5:"title";s:13:"Scanner Input";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:8;a:4:{s:3:"hid";s:7:"methods";s:5:"title";s:7:"Methods";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:9;a:4:{s:3:"hid";s:13:"pass_by_value";s:5:"title";s:13:"Pass by value";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:10;a:4:{s:3:"hid";s:9:"arraylist";s:5:"title";s:9:"ArrayList";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:11;a:4:{s:3:"hid";s:19:"declaring_arraylist";s:5:"title";s:19:"Declaring ArrayList";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:12;a:4:{s:3:"hid";s:12:"adding_items";s:5:"title";s:12:"Adding Items";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:13;a:4:{s:3:"hid";s:15:"access_elements";s:5:"title";s:15:"Access Elements";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:14;a:4:{s:3:"hid";s:25:"pass_arraylist_to_methods";s:5:"title";s:25:"Pass ArrayList to methods";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:15;a:4:{s:3:"hid";s:28:"modify_elements_of_arraylist";s:5:"title";s:28:"Modify elements of ArrayList";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:16;a:4:{s:3:"hid";s:25:"generating_random_numbers";s:5:"title";s:25:"Generating Random Numbers";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:17;a:4:{s:3:"hid";s:22:"searching_an_arraylist";s:5:"title";s:22:"Searching an ArrayList";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:427:"public class Hello
+{
+   public static void main(String[] args)
+   {
+     System.out.println("Hello");
+   }
+}
+
+
+
+public class Name
+{
+  private String first;
+  private String sec;
+  
+  public static void main(String[] args)
+  {
+    
+  }
+}
+
+
+
+public String displayName()
+{
+  return first + "" + sec;
+}
+
+public String getInitials()
+{
+  return first.substring(0,1) + sec.substring(0,1);
+}
+
+public static void main(String[] args)
+{
+}";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1379257564;s:8:"modified";i:1379302497;}s:7:"creator";s:4:"mani";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1379302497;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:9:"java-init";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:4:"mani";}}}

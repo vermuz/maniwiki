@@ -1,0 +1,21 @@
+====== Advanced Command Line ======
+
+===== which vim =====
+
+<code>
+1: which vim;
+2: file doc.pdf (type of file);
+3: file `which vim`;
+</code>
+
+===== basename =====
+
+<code>
+basename /home/mani/tuts => tuts
+</code>
+
+===== Clear =====
+
+<code>
+clear
+</code>

@@ -1,0 +1,62 @@
+====== Advanced Command Line ======
+
+===== which vim =====
+
+<code>
+1: which vim;
+2: file doc.pdf (type of file);
+3: file `which vim`;
+</code>
+
+===== basename =====
+
+<code>
+basename /home/mani/tuts => tuts
+</code>
+
+===== Clear =====
+
+<code>
+clear
+</code>
+
+===== pushd popd =====
+
+<code>
+pushd PATH
+dirs (show array of paths)
+popd (pops a PATH)
+</code>
+
+===== Archives =====
+
+<code>
+gzip file (compress)
+gzip -d file (decompress)
+
+zip name.zip file1 file2 file3
+unzip name.zip
+
+cvzf (create, verbose, zip, files)
+
+tar -cvzf archive.tar.gz file1 file2 file3
+tar -xvzf archive.tar.gz
+</code>
+
+===== Redirection =====
+
+<code>
+ls -l > listing.txt
+</code>
+
+===== Append =====
+(not overwrite)
+<code>
+ls -l / >> listing.txt
+</code>
+
+===== Grep =====
+
+<code>
+ls -l | grep Document
+</code>

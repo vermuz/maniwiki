@@ -1,0 +1,485 @@
+
+<h1 class="sectionedit1" id="java">Java</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Java" [1-20] -->
+<h1 class="sectionedit2" id="hello_world">Hello World</h1>
+<div class="level1">
+<pre class="code">public class Hello
+{
+   public static void main(String[] args)
+   {
+     System.out.println(&quot;Hello&quot;);
+   }
+}</pre>
+
+</div>
+<!-- EDIT2 SECTION "Hello World" [21-171] -->
+<h1 class="sectionedit3" id="class">Class</h1>
+<div class="level1">
+<pre class="code">public class Name
+{
+  private String first;
+  private String sec;
+  
+  public static void main(String[] args)
+  {
+    
+  }
+}</pre>
+
+</div>
+<!-- EDIT3 SECTION "Class" [172-332] -->
+<h1 class="sectionedit4" id="method">Method</h1>
+<div class="level1">
+<pre class="code">public String displayName()
+{
+  return first + &quot;&quot; + sec;
+}
+
+public String getInitials()
+{
+  return first.substring(0,1) + sec.substring(0,1);
+}
+
+public static void main(String[] args)
+{
+}</pre>
+<pre class="code">  public class ch5
+  {
+       public class name
+       {
+              // Data Members
+              private String first;
+              private String middle;
+              private String last;
+              
+              // Constructor
+              // instantiate object
+              public Name (String f, String m, String l)
+              {
+                  first = f;
+                  middle = m;
+                  last = l;
+              }
+              
+              // Constructor 2
+              public Name(String f, String l)
+              {
+                 first = f;
+                 middle = &quot;&quot;;
+                 last = l;
+              }
+              
+              // Representation of data
+              public String toString()
+              {
+                 return first + &quot;&quot; + middle + &quot;&quot; + second;
+              } 
+              
+              // Getter and Setter Methods
+              public String getFirst()
+              {
+                 return first;
+              }
+              
+              public String getLast()
+              {
+                 return last;
+              }
+              
+              public void setFirst(String fname)
+              {
+                 first = fname;
+              }
+              
+              public void setLast(String lname)
+              {
+                 last = lname;
+              }
+              
+              public void setName(String f, String m, String l)
+              {
+                 first = f;
+                 middle = m;
+                 last = l;
+              }
+                    
+       }
+  }
+  
+  public class NameTest
+  {
+     public static void main(String[] args)
+     {
+        Name my  = new Name(&quot;M&quot;, &quot;C&quot;, &quot;D&quot;);
+        Name my1 = new Name(&quot;M&quot;);
+        System.out.println(&quot;My name&quot; + my.toString());
+        someName.setName(&quot;Man&quot;, &quot;A&quot;, &quot;J&quot;);
+        System.out.println(&quot;someName: &quot; + someName.toString()); 
+     }
+  }</pre>
+
+</div>
+<!-- EDIT4 SECTION "Method" [333-2512] -->
+<h1 class="sectionedit5" id="final">FINAL</h1>
+<div class="level1">
+
+<p>
+constant - final variables (must assign while declaring it). We cannot change values of final variables.
+</p>
+<pre class="code">final double pi = 3;
+final double PI = 3;</pre>
+
+</div>
+<!-- EDIT5 SECTION "FINAL" [2513-2697] -->
+<h1 class="sectionedit6" id="math_class">Math Class</h1>
+<div class="level1">
+<pre class="code">int num = -100;
+
+System.out.println(Math.abs(num));
+
+Square Root : Math.sqrt(num);
+Maximum :  Math.max(num1, num2)
+Minimum :  Math.min(num1, num2)
+Power   :  Math.pow(4,3)</pre>
+
+</div>
+<!-- EDIT6 SECTION "Math Class" [2698-2911] -->
+<h1 class="sectionedit7" id="formatted_output">Formatted Output</h1>
+<div class="level1">
+<pre class="code">System.out.printf(&quot;pi = %.4f&quot;, pi);
+Specify field width: %20.4f</pre>
+
+</div>
+<!-- EDIT7 SECTION "Formatted Output" [2912-3023] -->
+<h1 class="sectionedit8" id="scanner_input">Scanner Input</h1>
+<div class="level1">
+
+<p>
+import java.util.Scanner;
+</p>
+<pre class="code">import java.util.Scanner;
+
+public class A
+{
+	main()
+	{
+		Scanner input = new Scanner(System.in);
+		int num;
+		num = input.nextInt();
+		System.out.println(num);
+
+		// Name
+		String name;
+		Scanner in = new Scanner(System.in);
+		System.out.print(&quot;Enter name&quot;);
+		name = in.next();
+		System.out.println(&quot;Name is:&quot;+ name);
+
+		// To receive input with spaces - Usman Ali
+		name = in.nextline();
+	}
+}</pre>
+
+</div>
+<!-- EDIT8 SECTION "Scanner Input" [3024-3489] -->
+<h1 class="sectionedit9" id="methods">Methods</h1>
+<div class="level1">
+<pre class="code">static int square(int number)
+{
+	return number * number;
+}
+
+public static void main()
+{
+	int n = 12;
+	System.out.println(&quot; &quot;+ square(n));
+}
+
+Method call:
+===========
+
+square(n);
+
+Temperature Conversion
+=======================
+
+static double ftoc(double temp)
+{
+	double celsius;
+	celsius = (temp -32.0) * (5.0/9.0);
+	return celsius;
+}
+
+main()
+{
+	Scanner input = new Scanner(System.in);
+	double ftemp, ctemp;
+	System.out.println(&quot;Enter number&quot;);
+	ftemp = input.nextDouble();
+	ctemp = ftoc(ftemp);
+}
+
+Multiple Parameters
+====================
+
+static double convert(double temp, String type)
+{
+	if(type.equals(&quot;c&quot;))
+		return .....
+	else
+		return .....
+}
+
+Predicate Methods
+==================
+
+static boolean isEven(int num)
+{
+	if(num % 2 == 0)
+		return true;
+	else
+		return false;
+}
+
+main()
+{
+	Scanner input = new Scanner();
+	int num;
+	System.out.println(&quot;Enter number&quot;);
+	num = input.nextInt();
+	if(isEven(num))
+		System.out.println(num+&quot; is even&quot;);
+	else
+		System.out.println(num+ &quot; is odd&quot;);
+}
+
+Check if boolean
+================
+
+static boolean isVowel(char c)
+{
+	if(c ==&#039;a&#039; || c == &#039;e&#039; || c == &#039;i&#039;
+		|| c == &#039;o&#039; || c == &#039;u&#039;)
+			return true;
+	else
+			return false;
+}</pre>
+
+</div>
+<!-- EDIT9 SECTION "Methods" [3490-4694] -->
+<h1 class="sectionedit10" id="pass_by_value">Pass by value</h1>
+<div class="level1">
+
+<p>
+When an argument is passed to a method, we say it has been passed by value.
+</p>
+
+<p>
+The original value does not change. Only the copy changes.
+</p>
+<pre class="code">static int square(int num)
+{
+	num *= num;
+	System.out.println(&quot;num&quot;+ num);
+	return num;
+}</pre>
+
+<p>
+Java does not allow C++ (pass by reference) - pointer to original value to change it
+</p>
+
+</div>
+<!-- EDIT10 SECTION "Pass by value" [4695-5052] -->
+<h1 class="sectionedit11" id="arraylist">ArrayList</h1>
+<div class="level1">
+
+<p>
+This stores multiple value sunder same name.
+</p>
+<pre class="code">import java.util.Scanner;
+
+public class C1
+{
+	main()
+	{
+		int g1, g2, g3;
+		double average;
+		total = g1+g2+g3;
+		average = total/3;
+	}
+}
+
+===================================
+
+import java.util.ArrayList;
+
+main()
+{
+	double average;
+	int total = 0;
+
+	ArrayList&lt;Integer&gt; grades = new ArrayList&lt;Integer&gt;();
+	
+	grades.add(78);
+	grades.add(80);
+	grades.add(90);
+
+	for(int i =0; i &lt; grades.size(); i++)
+	{
+		total += grades.get(i);
+	}
+
+	average = total / grades.size();
+	System.out.println(average);
+}
+</pre>
+
+</div>
+<!-- EDIT11 SECTION "ArrayList" [5053-5635] -->
+<h2 class="sectionedit12" id="declaring_arraylist">Declaring ArrayList</h2>
+<div class="level2">
+<pre class="code">import java.util.ArrayList;
+
+main()
+{
+	// Declaration
+	ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+	ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();
+}</pre>
+
+</div>
+<!-- EDIT12 SECTION "Declaring ArrayList" [5636-5846] -->
+<h2 class="sectionedit13" id="adding_items">Adding Items</h2>
+<div class="level2">
+<pre class="code">main()
+{
+	ArrayList&lt;Integer&gt; num = new ArrayList&lt;Integer&gt;();
+	// Size of ArrayList
+	num.size();
+	num.add(0);
+}</pre>
+
+</div>
+<!-- EDIT13 SECTION "Adding Items" [5847-5998] -->
+<h2 class="sectionedit14" id="access_elements">Access Elements</h2>
+<div class="level2">
+<pre class="code">ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+for(int i = 1; i &lt; 11; ++i)
+	nums.add(i);
+int total = 0;
+for(int i = 0; i &lt; nums.size(); ++i)
+{
+	// i - index position
+	total += nums.get(i); 
+}
+
+// First Element
+nums.get(0);
+
+// Last Element
+nums.get(nums.size()-1);</pre>
+
+</div>
+<!-- EDIT14 SECTION "Access Elements" [5999-6312] -->
+<h2 class="sectionedit15" id="pass_arraylist_to_methods">Pass ArrayList to methods</h2>
+<div class="level2">
+
+<p>
+Modifying elements.
+</p>
+<pre class="code">static void display(ArrayList arr)
+{
+	for(int i = 0; i &lt; arr.size() ; ++i)
+		System.out.println(arr.get(i) + &quot;&quot;);
+	System.out.println(i);
+}
+
+public static void main()
+{
+	ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+	for(int i = 1; i &lt; 11; ++i)
+		nums.add(i);
+	display(nums);
+}</pre>
+
+</div>
+<!-- EDIT15 SECTION "Pass ArrayList to methods" [6313-6672] -->
+<h2 class="sectionedit16" id="modify_elements_of_arraylist">Modify elements of ArrayList</h2>
+<div class="level2">
+
+<p>
+To modify elements of ArrayList → we use set.
+ArrayList → reference objects always passed as reference.
+We have access to memory location.
+</p>
+<pre class="code">*********************************
+We are setting element on index
+i by its value + change by amount
+*********************************
+
+static void change(ArrayList&lt;Integer&gt; arr, int element)
+{
+	int val;
+	for (int i =0; i &lt; arr.size(); i++)
+	{
+		val = arr.get(i);
+		arr.set(i, val + amount);		
+	}
+}
+
+main()
+{
+	change(nums, 5);
+}</pre>
+
+</div>
+<!-- EDIT16 SECTION "Modify elements of ArrayList" [6673-7199] -->
+<h2 class="sectionedit17" id="generating_random_numbers">Generating Random Numbers</h2>
+<div class="level2">
+<pre class="code">import java.util.Random;
+import java.util.ArrayList;
+
+public class R
+{
+	static void display(ArrayList arr)
+	{
+		for( int i = 0; i &lt; arr.size(); ++i)
+		{
+			System.out.print(arr.get(i) + &quot; &quot;);
+		}
+	}
+	
+	main()
+	{
+		// To guarantee Random number
+		// generation - use good random
+		// number seed
+
+		Random rand = new Random(System.currentTimeMillis());
+		
+		int num; 
+		// 0 - 100
+		// num = rand.nextInt(101);
+		// System.out.println(num);
+
+		ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+
+		for(int i = 0; i &lt; 10; ++i)
+		{
+			num = rand.nextInt(100);
+			nums.add(num);
+		}
+		display(nums);
+	}
+}</pre>
+
+</div>
+<!-- EDIT17 SECTION "Generating Random Numbers" [7200-7856] -->
+<h2 class="sectionedit18" id="searching_an_arraylist">Searching an ArrayList</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT18 SECTION "Searching an ArrayList" [7857-] -->

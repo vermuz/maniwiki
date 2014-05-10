@@ -1,0 +1,41 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1374639420;s:8:"modified";i:1374640223;}s:7:"creator";s:4:"mani";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1374640223;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:15:"adv-commandline";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:4:"mani";}s:5:"title";s:21:"Advanced Command Line";s:11:"description";a:2:{s:15:"tableofcontents";a:9:{i:0;a:4:{s:3:"hid";s:21:"advanced_command_line";s:5:"title";s:21:"Advanced Command Line";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:9:"which_vim";s:5:"title";s:9:"which vim";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:8:"basename";s:5:"title";s:8:"basename";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:5:"clear";s:5:"title";s:5:"Clear";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:10:"pushd_popd";s:5:"title";s:10:"pushd popd";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:8:"archives";s:5:"title";s:8:"Archives";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:6;a:4:{s:3:"hid";s:11:"redirection";s:5:"title";s:11:"Redirection";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:7;a:4:{s:3:"hid";s:6:"append";s:5:"title";s:6:"Append";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:8;a:4:{s:3:"hid";s:4:"grep";s:5:"title";s:4:"Grep";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:424:"which vim
+
+
+1: which vim;
+2: file doc.pdf (type of file);
+3: file `which vim`;
+
+
+basename
+
+
+basename /home/mani/tuts => tuts
+
+
+Clear
+
+
+clear
+
+
+pushd popd
+
+
+pushd PATH
+dirs (show array of paths)
+popd (pops a PATH)
+
+
+Archives
+
+
+gzip file (compress)
+gzip -d file (decompress)
+
+zip name.zip file1 file2 file3
+unzip name.zip
+
+cvzf (create, verbose, zip, files)
+
+tar -cvzf archive.tar.gz file1 file2 file3
+tar -xvzf archive.tar.gz";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1374639420;s:8:"modified";i:1374640223;}s:7:"creator";s:4:"mani";s:4:"user";s:5:"admin";s:11:"last_change";a:7:{s:4:"date";i:1374640223;s:2:"ip";s:9:"127.0.0.1";s:4:"type";s:1:"E";s:2:"id";s:15:"adv-commandline";s:4:"user";s:5:"admin";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:5:"admin";s:4:"mani";}}}

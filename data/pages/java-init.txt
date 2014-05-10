@@ -1,0 +1,456 @@
+====== Java ======
+
+====== Hello World ======
+<code>
+public class Hello
+{
+   public static void main(String[] args)
+   {
+     System.out.println("Hello");
+   }
+}
+</code>
+
+====== Class ======
+<code>
+public class Name
+{
+  private String first;
+  private String sec;
+  
+  public static void main(String[] args)
+  {
+    
+  }
+}
+</code>
+
+====== Method ======
+
+<code>
+public String displayName()
+{
+  return first + "" + sec;
+}
+
+public String getInitials()
+{
+  return first.substring(0,1) + sec.substring(0,1);
+}
+
+public static void main(String[] args)
+{
+}
+</code>
+
+<code>
+  public class ch5
+  {
+       public class name
+       {
+              // Data Members
+              private String first;
+              private String middle;
+              private String last;
+              
+              // Constructor
+              // instantiate object
+              public Name (String f, String m, String l)
+              {
+                  first = f;
+                  middle = m;
+                  last = l;
+              }
+              
+              // Constructor 2
+              public Name(String f, String l)
+              {
+                 first = f;
+                 middle = "";
+                 last = l;
+              }
+              
+              // Representation of data
+              public String toString()
+              {
+                 return first + "" + middle + "" + second;
+              } 
+              
+              // Getter and Setter Methods
+              public String getFirst()
+              {
+                 return first;
+              }
+              
+              public String getLast()
+              {
+                 return last;
+              }
+              
+              public void setFirst(String fname)
+              {
+                 first = fname;
+              }
+              
+              public void setLast(String lname)
+              {
+                 last = lname;
+              }
+              
+              public void setName(String f, String m, String l)
+              {
+                 first = f;
+                 middle = m;
+                 last = l;
+              }
+                    
+       }
+  }
+  
+  public class NameTest
+  {
+     public static void main(String[] args)
+     {
+        Name my  = new Name("M", "C", "D");
+        Name my1 = new Name("M");
+        System.out.println("My name" + my.toString());
+        someName.setName("Man", "A", "J");
+        System.out.println("someName: " + someName.toString()); 
+     }
+  }
+</code>
+
+====== FINAL ======
+
+constant - final variables (must assign while declaring it). We cannot change values of final variables.
+
+<code>
+final double pi = 3;
+final double PI = 3;
+</code>
+
+====== Math Class ======
+
+<code>
+int num = -100;
+
+System.out.println(Math.abs(num));
+
+Square Root : Math.sqrt(num);
+Maximum :  Math.max(num1, num2)
+Minimum :  Math.min(num1, num2)
+Power   :  Math.pow(4,3)
+</code>
+
+====== Formatted Output ======
+
+<code>
+System.out.printf("pi = %.4f", pi);
+Specify field width: %20.4f
+</code>
+
+====== Scanner Input ======
+import java.util.Scanner;
+
+<code>
+import java.util.Scanner;
+
+public class A
+{
+	main()
+	{
+		Scanner input = new Scanner(System.in);
+		int num;
+		num = input.nextInt();
+		System.out.println(num);
+
+		// Name
+		String name;
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter name");
+		name = in.next();
+		System.out.println("Name is:"+ name);
+
+		// To receive input with spaces - Usman Ali
+		name = in.nextline();
+	}
+}
+</code>
+
+====== Methods ======
+
+<code>
+static int square(int number)
+{
+	return number * number;
+}
+
+public static void main()
+{
+	int n = 12;
+	System.out.println(" "+ square(n));
+}
+
+Method call:
+===========
+
+square(n);
+
+Temperature Conversion
+=======================
+
+static double ftoc(double temp)
+{
+	double celsius;
+	celsius = (temp -32.0) * (5.0/9.0);
+	return celsius;
+}
+
+main()
+{
+	Scanner input = new Scanner(System.in);
+	double ftemp, ctemp;
+	System.out.println("Enter number");
+	ftemp = input.nextDouble();
+	ctemp = ftoc(ftemp);
+}
+
+Multiple Parameters
+====================
+
+static double convert(double temp, String type)
+{
+	if(type.equals("c"))
+		return .....
+	else
+		return .....
+}
+
+Predicate Methods
+==================
+
+static boolean isEven(int num)
+{
+	if(num % 2 == 0)
+		return true;
+	else
+		return false;
+}
+
+main()
+{
+	Scanner input = new Scanner();
+	int num;
+	System.out.println("Enter number");
+	num = input.nextInt();
+	if(isEven(num))
+		System.out.println(num+" is even");
+	else
+		System.out.println(num+ " is odd");
+}
+
+Check if boolean
+================
+
+static boolean isVowel(char c)
+{
+	if(c =='a' || c == 'e' || c == 'i'
+		|| c == 'o' || c == 'u')
+			return true;
+	else
+			return false;
+}
+</code>
+
+====== Pass by value ======
+
+When an argument is passed to a method, we say it has been passed by value.
+
+The original value does not change. Only the copy changes.
+
+<code>
+static int square(int num)
+{
+	num *= num;
+	System.out.println("num"+ num);
+	return num;
+}
+</code>
+
+Java does not allow C++ (pass by reference) - pointer to original value to change it
+
+====== ArrayList ======
+
+This stores multiple value sunder same name.
+
+<code>
+import java.util.Scanner;
+
+public class C1
+{
+	main()
+	{
+		int g1, g2, g3;
+		double average;
+		total = g1+g2+g3;
+		average = total/3;
+	}
+}
+
+===================================
+
+import java.util.ArrayList;
+
+main()
+{
+	double average;
+	int total = 0;
+
+	ArrayList<Integer> grades = new ArrayList<Integer>();
+	
+	grades.add(78);
+	grades.add(80);
+	grades.add(90);
+
+	for(int i =0; i < grades.size(); i++)
+	{
+		total += grades.get(i);
+	}
+
+	average = total / grades.size();
+	System.out.println(average);
+}
+
+</code>
+
+===== Declaring ArrayList =====
+<code>
+import java.util.ArrayList;
+
+main()
+{
+	// Declaration
+	ArrayList<String> names = new ArrayList<String>();
+	ArrayList<Integer> numbers = new ArrayList<Integer>();
+}
+</code>
+===== Adding Items =====
+<code>
+main()
+{
+	ArrayList<Integer> num = new ArrayList<Integer>();
+	// Size of ArrayList
+	num.size();
+	num.add(0);
+}
+</code>
+
+===== Access Elements =====
+<code>
+ArrayList<Integer> nums = new ArrayList<Integer>();
+for(int i = 1; i < 11; ++i)
+	nums.add(i);
+int total = 0;
+for(int i = 0; i < nums.size(); ++i)
+{
+	// i - index position
+	total += nums.get(i); 
+}
+
+// First Element
+nums.get(0);
+
+// Last Element
+nums.get(nums.size()-1);
+</code>
+
+===== Pass ArrayList to methods =====
+
+Modifying elements.
+
+<code>
+static void display(ArrayList arr)
+{
+	for(int i = 0; i < arr.size() ; ++i)
+		System.out.println(arr.get(i) + "");
+	System.out.println(i);
+}
+
+public static void main()
+{
+	ArrayList<Integer> nums = new ArrayList<Integer>();
+	for(int i = 1; i < 11; ++i)
+		nums.add(i);
+	display(nums);
+}
+</code>
+
+===== Modify elements of ArrayList =====
+To modify elements of ArrayList -> we use set.
+ArrayList -> reference objects always passed as reference.
+We have access to memory location.
+
+<code>
+*********************************
+We are setting element on index
+i by its value + change by amount
+*********************************
+
+static void change(ArrayList<Integer> arr, int element)
+{
+	int val;
+	for (int i =0; i < arr.size(); i++)
+	{
+		val = arr.get(i);
+		arr.set(i, val + amount);		
+	}
+}
+
+main()
+{
+	change(nums, 5);
+}
+</code>
+
+===== Generating Random Numbers =====
+
+<code>
+import java.util.Random;
+import java.util.ArrayList;
+
+public class R
+{
+	static void display(ArrayList arr)
+	{
+		for( int i = 0; i < arr.size(); ++i)
+		{
+			System.out.print(arr.get(i) + " ");
+		}
+	}
+	
+	main()
+	{
+		// To guarantee Random number
+		// generation - use good random
+		// number seed
+
+		Random rand = new Random(System.currentTimeMillis());
+		
+		int num; 
+		// 0 - 100
+		// num = rand.nextInt(101);
+		// System.out.println(num);
+
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+
+		for(int i = 0; i < 10; ++i)
+		{
+			num = rand.nextInt(100);
+			nums.add(num);
+		}
+		display(nums);
+	}
+}
+</code>
+
+===== Searching an ArrayList =====

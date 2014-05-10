@@ -1,0 +1,91 @@
+====== Linux In the Real World ======
+
+===== Lesson 2 =====
+
+Netinstall is not fast. Try local mirrors. <br/>
+
+Local Mirrors
+
+<code>
+root@server: ls -l /var/www
+centos ubuntu index.html
+</code>
+
+we use rsync for creating mirrors: http://www.thegeekstuff.com/2010/09/rsync-command-examples/
+
+<code>
+root@server: rsync -a rsync://archive.ubuntu.com/ubuntu /opt/mirror/ubuntu
+root@server: rsync -a --progress rsync://archive.ubuntu.com/ubuntu /opt/mirror/ubuntu 
+(want to see what is going in)
+</code>
+
+Use scripts when needed to keep your mirrors up to date. https://help.ubuntu.com/community/Rsyncmirror (Ubuntu)
+http://www.gtkdb.de/index_33_1739.html (Cent OS)
+
+=== Kickstart === 
+
+Note: to start desktop in ubuntu use startx
+
+
+kickstart files are a recipe for how you want the install to go.
+<code>
+sudo apt-get install system-config-kickstart
+</code>
+
+=== Ubuntu 14 kickstart issue ===
+https://bugs.launchpad.net/ubuntu/+source/system-config-kickstart/+bug/1260107
+https://help.ubuntu.com/community/KickstartCompatibility
+
+===== Lesson 3 =====
+
+=== Networking ===
+IP Addressing
+Private Ranges
+Static, DHCP or both
+
+===Ethernet Bonding ===
+Most servers now come with at-least two ethernet ports.
+
+
+  * Public IPs are routable on the greater internet. (They are live) (They are routable)
+  * Public IPs should be assigned to a router or a firewall not to the physical server and then have ports forwarded in.
+  * Public IPs cost money (facing the internet) If it is a static IP - more expensive
+  * for home usage - it can be a dymanic IP .Since you are not running any services from home - you can have a dynamic IP. If I update my DNS with Dynamic DNS - no matter what my IP address change is my DNS remains the same.
+
+  * Public IP is a live IP
+
+http://en.wikipedia.org/wiki/Dynamic_DNS
+
+=== Private Network ===
+
+In an organization - all the computers will have private IP addresses.
+Three sets of IP ranges not routable on the internet, they are only routable privately,
+You cannot access them through internet.
+
+<code>
+Class C -> 192.168.x.x (256) ----> THIS IS USED EVERYWHERE o.k with home use
+Class B -> 172.16-31.x.x (16)
+Class A -> 10.x.x.x (1)
+What about 240.x.x.x?
+</code>
+
+In corporate world - most of the organizations have private IP ranges.
+
+=== Recommendation for setting up a network ===
+
+Avoid Class C in corporate world. 
+Nerdy elite 172. Class B range.
+172.16-31.x.x (16)
+
+=== Assigning Addresses ===
+
+=== Static ===
+Manually assign address to the computer - does not change, Just do it to servers
+
+=== Dynamic (DHCP) ===
+Through DHCP server, Dynamic addressing 10.10.10.1- 200
+
+=== Static (DHCP) ===
+Static DHCP assigned address - assigned by server, based on rules you set. Assigned every-time systems boot.
+=== Rogue DHCP servers ===
+Starts handing out incorrect addresses - servers can get addresses they can`t have and you can`t access them (in case you Static DHCP)

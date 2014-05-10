@@ -1,0 +1,171 @@
+
+<h1 class="sectionedit1" id="linux_in_the_real_world">Linux In the Real World</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Linux In the Real World" [1-39] -->
+<h2 class="sectionedit2" id="lesson_2">Lesson 2</h2>
+<div class="level2">
+
+<p>
+Netinstall is not fast. Try local mirrors. &lt;br/&gt;
+</p>
+
+<p>
+Local Mirrors
+</p>
+<pre class="code">root@server: ls -l /var/www
+centos ubuntu index.html</pre>
+
+<p>
+we use rsync for creating mirrors: <a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/" class="urlextern" title="http://www.thegeekstuff.com/2010/09/rsync-command-examples/"  rel="nofollow">http://www.thegeekstuff.com/2010/09/rsync-command-examples/</a>
+</p>
+<pre class="code">root@server: rsync -a rsync://archive.ubuntu.com/ubuntu /opt/mirror/ubuntu
+root@server: rsync -a --progress rsync://archive.ubuntu.com/ubuntu /opt/mirror/ubuntu 
+(want to see what is going in)</pre>
+
+<p>
+Use scripts when needed to keep your mirrors up to date. <a href="https://help.ubuntu.com/community/Rsyncmirror" class="urlextern" title="https://help.ubuntu.com/community/Rsyncmirror"  rel="nofollow">https://help.ubuntu.com/community/Rsyncmirror</a> (Ubuntu)
+<a href="http://www.gtkdb.de/index_33_1739.html" class="urlextern" title="http://www.gtkdb.de/index_33_1739.html"  rel="nofollow">http://www.gtkdb.de/index_33_1739.html</a> (Cent <abbr title="Operating System">OS</abbr>)
+</p>
+
+</div>
+
+<h4 id="kickstart">Kickstart</h4>
+<div class="level4">
+
+<p>
+Note: to start desktop in ubuntu use startx
+</p>
+
+<p>
+kickstart files are a recipe for how you want the install to go.
+</p>
+<pre class="code">sudo apt-get install system-config-kickstart</pre>
+
+</div>
+
+<h4 id="ubuntu_14_kickstart_issue">Ubuntu 14 kickstart issue</h4>
+<div class="level4">
+
+<p>
+<a href="https://bugs.launchpad.net/ubuntu/+source/system-config-kickstart/+bug/1260107" class="urlextern" title="https://bugs.launchpad.net/ubuntu/+source/system-config-kickstart/+bug/1260107"  rel="nofollow">https://bugs.launchpad.net/ubuntu/+source/system-config-kickstart/+bug/1260107</a>
+<a href="https://help.ubuntu.com/community/KickstartCompatibility" class="urlextern" title="https://help.ubuntu.com/community/KickstartCompatibility"  rel="nofollow">https://help.ubuntu.com/community/KickstartCompatibility</a>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "Lesson 2" [40-1025] -->
+<h2 class="sectionedit3" id="lesson_3">Lesson 3</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="networking">Networking</h4>
+<div class="level4">
+
+<p>
+IP Addressing
+Private Ranges
+Static, DHCP or both
+</p>
+
+</div>
+
+<h4 id="ethernet_bonding">Ethernet Bonding</h4>
+<div class="level4">
+
+<p>
+Most servers now come with at-least two ethernet ports.
+</p>
+<ul>
+<li class="level1"><div class="li"> Public IPs are routable on the greater internet. (They are live) (They are routable)</div>
+</li>
+<li class="level1"><div class="li"> Public IPs should be assigned to a router or a firewall not to the physical server and then have ports forwarded in.</div>
+</li>
+<li class="level1"><div class="li"> Public IPs cost money (facing the internet) If it is a static IP - more expensive</div>
+</li>
+<li class="level1"><div class="li"> for home usage - it can be a dymanic IP .Since you are not running any services from home - you can have a dynamic IP. If I update my <abbr title="Domain Name System">DNS</abbr> with Dynamic <abbr title="Domain Name System">DNS</abbr> - no matter what my IP address change is my <abbr title="Domain Name System">DNS</abbr> remains the same.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Public IP is a live IP</div>
+</li>
+</ul>
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Dynamic_DNS" class="urlextern" title="http://en.wikipedia.org/wiki/Dynamic_DNS"  rel="nofollow">http://en.wikipedia.org/wiki/Dynamic_DNS</a>
+</p>
+
+</div>
+
+<h4 id="private_network">Private Network</h4>
+<div class="level4">
+
+<p>
+In an organization - all the computers will have private IP addresses.
+Three sets of IP ranges not routable on the internet, they are only routable privately,
+You cannot access them through internet.
+</p>
+<pre class="code">Class C -&gt; 192.168.x.x (256) ----&gt; THIS IS USED EVERYWHERE o.k with home use
+Class B -&gt; 172.16-31.x.x (16)
+Class A -&gt; 10.x.x.x (1)
+What about 240.x.x.x?</pre>
+
+<p>
+In corporate world - most of the organizations have private IP ranges.
+</p>
+
+</div>
+
+<h4 id="recommendation_for_setting_up_a_network">Recommendation for setting up a network</h4>
+<div class="level4">
+
+<p>
+Avoid Class C in corporate world. 
+Nerdy elite 172. Class B range.
+172.16-31.x.x (16)
+</p>
+
+</div>
+
+<h4 id="assigning_addresses">Assigning Addresses</h4>
+<div class="level4">
+
+</div>
+
+<h4 id="static">Static</h4>
+<div class="level4">
+
+<p>
+Manually assign address to the computer - does not change, Just do it to servers
+</p>
+
+</div>
+
+<h4 id="dynamic_dhcp">Dynamic (DHCP)</h4>
+<div class="level4">
+
+<p>
+Through DHCP server, Dynamic addressing 10.10.10.1- 200
+</p>
+
+</div>
+
+<h4 id="static_dhcp">Static (DHCP)</h4>
+<div class="level4">
+
+<p>
+Static DHCP assigned address - assigned by server, based on rules you set. Assigned every-time systems boot.
+</p>
+
+</div>
+
+<h4 id="rogue_dhcp_servers">Rogue DHCP servers</h4>
+<div class="level4">
+
+<p>
+Starts handing out incorrect addresses - servers can get addresses they can`t have and you can`t access them (in case you Static DHCP)
+</p>
+
+</div>
+<!-- EDIT3 SECTION "Lesson 3" [1026-] -->

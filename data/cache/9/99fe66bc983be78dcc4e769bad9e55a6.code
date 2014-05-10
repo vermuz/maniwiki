@@ -1,0 +1,20 @@
+  <span class="kw1">public</span> <span class="kw1">class</span> ch5
+  <span class="br0">&#123;</span>
+       <span class="kw1">public</span> <span class="kw1">class</span> name
+       <span class="br0">&#123;</span>
+              <span class="co1">// Data Members</span>
+              <span class="kw1">private</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> first<span class="sy0">;</span>
+              <span class="kw1">private</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> middle<span class="sy0">;</span>
+              <span class="kw1">private</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> last<span class="sy0">;</span>
+&nbsp;
+              <span class="co1">// Constructor</span>
+              <span class="co1">// instantiate object</span>
+&nbsp;
+              <span class="kw1">public</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+name"><span class="kw3">Name</span></a> <span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> f, <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> m, <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a> l<span class="br0">&#41;</span>
+              <span class="br0">&#123;</span>
+                  first <span class="sy0">=</span> f<span class="sy0">;</span>
+                  middle <span class="sy0">=</span> m<span class="sy0">;</span>
+                  last <span class="sy0">=</span> l<span class="sy0">;</span>
+              <span class="br0">&#125;</span>       
+       <span class="br0">&#125;</span>
+  <span class="br0">&#125;</span>
